@@ -14,6 +14,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #111;
+    position: relative;
 
 }
 
@@ -21,6 +22,11 @@ body{
 .menu{
     display: flex;
     gap: 6px;
+    position: absolute;
+    top: 20px;
+
+    /*to remove yung unnecessary shake after or before animation/transition*/
+    backface-visibility: hidden;
 }
 
 
@@ -154,16 +160,17 @@ body{
 
 
 
+/* these two hovers are for border glow effects*/
 .menu .user:hover{
 
-    border: px solid #125c5d;
-    box-shadow: 1px 0 7px #125c5d, -1px 0 7px #777;
+    border: 1px solid rgba(18, 92, 93, 0.3); 
+    box-shadow: 1px 0 7px rgba(18, 92, 93, 0.9) ,  -1px 0 7px rgba(119, 119, 119, 0.9);
     transition: 0.5s;
 }
 
 .navigation:hover{
 
-    border: 1px solid #125c5d;
-    box-shadow: 1px 0 7px #125c5d, -1px 0 7px #777;
+    border: 1px solid rgba(18, 92, 93, 0.3); 
+    box-shadow: 1px 0 7px rgba(18, 92, 93, 0.9) , -1px 0 7px rgba(119, 119, 119, 0.9);
     transition: 0.5s;
 }
