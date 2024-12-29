@@ -14,21 +14,30 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #111;
-    position: relative;
 
+    /*nilagay as ref para sa buong menu na mag fixed sa taas*/
+    position: relative;
 }
 
 /*eto yung sa 2 box para mag align at magka-gap/hati*/
 .menu{
     display: flex;
     gap: 6px;
-    position: absolute;
+
+    /*reference nito ay body na relative, tas fixed pos to para nasa taas lang permanent kahit mag scroll*/
+    position: fixed;
     top: 20px;
 
     /*to remove yung unnecessary shake after or before animation/transition*/
     backface-visibility: hidden;
 }
 
+
+.lorem{
+    margin: 100px 0 30px 30px;
+    color: #444;
+
+}
 
 .menu .user{
     position: relative;
